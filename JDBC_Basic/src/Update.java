@@ -3,7 +3,7 @@ import java.sql.*;
 public class Update {
     public static void main(String[] args) throws ClassNotFoundException {
 
-        // creating connection using these 3 parameters
+        // Creating connection using these 3 parameters
         // mydatabase is the name of db we created
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
