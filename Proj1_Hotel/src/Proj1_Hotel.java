@@ -6,6 +6,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class Proj1_Hotel {
+    // url, username, password only used in this class coz of private
+    // no need to create obj as it is static , final so that it cannot change
     private static final String url = "jdbc:mysql://localhost:3306/hotel_db";
     private static final String username = "root";
     private static final String password = "Admin@123";
@@ -64,6 +66,7 @@ public class Proj1_Hotel {
 
     }
 
+    // 1. method to reserve room, take common arg ie connection
     private static void reserveRoom(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter guest name: ");
@@ -77,6 +80,7 @@ public class Proj1_Hotel {
             String sql = "INSERT INTO reservations (guest_name, room_number, contact_number) " +
                     "VALUES ('" + guestName + "', " + roomNumber + ", '" + contactNumber + "')";
 
+                    // statement interface is used in java to run sql query in java, which have this 2 methods ie executeupdate and executequery
             try (Statement statement = connection.createStatement()) {
                 int affectedRows = statement.executeUpdate(sql);
 
@@ -91,6 +95,7 @@ public class Proj1_Hotel {
         }
     }
 
+    // 2. view reservation method
     private static void viewReservations(Connection connection) throws SQLException {
         String sql = "SELECT reservation_id, guest_name, room_number, contact_number, reservation_date FROM reservations";
 
@@ -122,6 +127,7 @@ public class Proj1_Hotel {
         }
     }
 
+    // 3. getroom method
     private static void getRoomNumber(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter reservation ID: ");
@@ -149,6 +155,7 @@ public class Proj1_Hotel {
         }
     }
 
+    // 4. update reservation
     private static void updateReservation(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter reservation ID to update: ");
@@ -186,6 +193,7 @@ public class Proj1_Hotel {
         }
     }
 
+    // 5. delete reservation
     private static void deleteReservation(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter reservation ID to delete: ");
@@ -212,6 +220,7 @@ public class Proj1_Hotel {
         }
     }
 
+    // 6. exit
     private static boolean reservationExists(Connection connection, int reservationId) {
         try {
             String sql = "SELECT reservation_id FROM reservations WHERE reservation_id = " + reservationId;
