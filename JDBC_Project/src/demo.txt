@@ -1,0 +1,2 @@
+Class.forName("com.mysql.jdbc.Driver");  --driver
+Connection con = DriverManager.getConnection(url)
