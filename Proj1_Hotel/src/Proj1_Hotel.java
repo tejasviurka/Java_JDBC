@@ -80,7 +80,8 @@ public class Proj1_Hotel {
             String sql = "INSERT INTO reservations (guest_name, room_number, contact_number) " +
                     "VALUES ('" + guestName + "', " + roomNumber + ", '" + contactNumber + "')";
 
-                    // statement interface is used in java to run sql query in java, which have this 2 methods ie executeupdate and executequery
+            // statement interface is used in java to run sql query in java, which have this
+            // 2 methods ie executeupdate and executequery
             try (Statement statement = connection.createStatement()) {
                 int affectedRows = statement.executeUpdate(sql);
 
@@ -155,7 +156,7 @@ public class Proj1_Hotel {
         }
     }
 
-    // 4. update reservation
+    // 4. update reservation method
     private static void updateReservation(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter reservation ID to update: ");
