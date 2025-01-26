@@ -8,6 +8,7 @@ public class PreparedST {
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
         String password = "Tejasvi2022";
+        // retrive data from single & multiple placemholder
         String query = "Select * from emp where name=? AND job_title=?";
 
         try {
