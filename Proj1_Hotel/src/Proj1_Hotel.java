@@ -128,7 +128,7 @@ public class Proj1_Hotel {
         }
     }
 
-    // 3. getroom method
+    // 3. Getroom method
     private static void getRoomNumber(Connection connection, Scanner scanner) {
         try {
             System.out.print("Enter reservation ID: ");
