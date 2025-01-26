@@ -5,7 +5,7 @@ public class InsertPrep {
     public static void main(String[] args) throws ClassNotFoundException {
 
         // Creating connection using these 3 parameters
-        // mydatabase is the name of db we created
+        // Mydatabase is the name of db we created
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
         String password = "Tejasvi2022";
