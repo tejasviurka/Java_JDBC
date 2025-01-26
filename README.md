@@ -1,4 +1,4 @@
-# JDBC Examples and Projects Repository
+# JDBC Basics and Projects Repository
 
 This repository contains examples and mini-projects related to **JDBC (Java Database Connectivity)**. Each folder focuses on specific JDBC concepts or use cases.
 
