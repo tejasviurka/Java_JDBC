@@ -68,6 +68,13 @@ This repository contains examples and mini-projects related to **JDBC (Java Data
 
 ---
 
+### 8. **Proj3_Hospital**
+   - A **Hospital Management System** project built using JDBC.
+   - Features:
+     - Patient Registration & Profile Management, Patient Records.
+     - Doctor Profile Management, Patient Management:.
+     - Appointment Booking, Real time update.
+
 ## **How to Use This Repository**
 1. Clone the repository:
    ```bash
